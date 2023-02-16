@@ -3,21 +3,22 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return arr.sort.last(2).sum
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.length < 2 ? false:
+  (arr.combination(2).find{|x,y| x + y == n} true : false)
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+
 end
 
 def starts_with_consonant? s
