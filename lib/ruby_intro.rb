@@ -12,7 +12,7 @@ end
 
 def sum_to_n? arr, n
   arr.length < 2 ? false:
-  (arr.combination(2).find{|x,y| x + y == n} true : false)
+  (arr.combination(2).find{|x,y| x + y == n} ? true : false)
 end
 
 # Part 2
