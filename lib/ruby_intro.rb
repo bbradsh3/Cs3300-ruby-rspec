@@ -18,11 +18,11 @@ end
 # Part 2
 
 def hello(name)
-  "Hello, " + name
+  return ("Hello, " + name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  /^[^aeiou\W]/i.match(s) != nil
 end
 
 def binary_multiple_of_4? s
@@ -32,5 +32,25 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+
+  def initialize(isbn, price)
+    raise ArgumentError.new("ISBN cannot be empty") if isbn.empty?
+    raise ArgumentError.new("Price cannot be empty") unless price > 0
+    @isbn = isbn
+    @price = price
+  end
+
+  def book
+    @isbn
+    @price
+  end
+  
+  attr_accessor :isbn
+  attr_accessor :price
+
+  def price_as_string
+    "$%.2f" % @price
+  end
+
+
 end
