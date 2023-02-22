@@ -18,7 +18,7 @@ end
 # Part 2
 
 def hello(name)
-
+  "Hello, " + name
 end
 
 def starts_with_consonant? s
